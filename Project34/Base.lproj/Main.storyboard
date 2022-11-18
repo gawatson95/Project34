@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ubC-aO-JgA">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project34" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="746"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ktU-kg-y2U">
+                                <rect key="frame" x="0.0" y="0.0" width="1180" height="746"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76J-Tm-whK">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="746"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcF-Ij-BRC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiP-tk-2gU">
+                                        <rect key="frame" x="169" y="0.0" width="166.5" height="746"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tO5-bj-y8m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgk-LX-63j">
+                                        <rect key="frame" x="337.5" y="0.0" width="167" height="746"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLA-Bh-yOG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-Sd-Aj3">
+                                        <rect key="frame" x="506.5" y="0.0" width="167" height="746"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="baP-2E-Ip3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0N-QM-1N7">
+                                        <rect key="frame" x="675.5" y="0.0" width="167" height="746"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMk-8t-n9W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-Q3-kwZ">
+                                        <rect key="frame" x="844.5" y="0.0" width="166.5" height="746"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="shO-Ij-MJa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozd-c1-JZ1">
+                                        <rect key="frame" x="1013" y="0.0" width="167" height="746"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htE-tD-Up9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ktU-kg-y2U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C3n-SY-2hB"/>
+                            <constraint firstItem="ktU-kg-y2U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nR8-4E-5kY"/>
+                            <constraint firstItem="ktU-kg-y2U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tV9-WW-yTd"/>
+                            <constraint firstItem="ktU-kg-y2U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vA8-w6-K95"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZXg-Ey-CS0"/>
+                    <connections>
+                        <outletCollection property="columnButtons" destination="76J-Tm-whK" collectionClass="NSMutableArray" id="Xqd-j9-9jj"/>
+                        <outletCollection property="columnButtons" destination="eiP-tk-2gU" collectionClass="NSMutableArray" id="j1j-hz-5gj"/>
+                        <outletCollection property="columnButtons" destination="qgk-LX-63j" collectionClass="NSMutableArray" id="zgi-ht-Aqf"/>
+                        <outletCollection property="columnButtons" destination="wTS-Sd-Aj3" collectionClass="NSMutableArray" id="4g4-T8-ZKz"/>
+                        <outletCollection property="columnButtons" destination="K0N-QM-1N7" collectionClass="NSMutableArray" id="yiI-g9-VcN"/>
+                        <outletCollection property="columnButtons" destination="yH7-Q3-kwZ" collectionClass="NSMutableArray" id="ooe-Fg-aKF"/>
+                        <outletCollection property="columnButtons" destination="ozd-c1-JZ1" collectionClass="NSMutableArray" id="Hmb-hr-Uxl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.11864406779671" y="8.0487804878048781"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bbw-R5-SeD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ubC-aO-JgA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ALS-X9-jh0">
+                        <rect key="frame" x="0.0" y="24" width="1180" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="E8O-wT-dtp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mep-rR-1yN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90.731707317073173" y="8.6440677966101696"/>
+        </scene>
+    </scenes>
+</document>
