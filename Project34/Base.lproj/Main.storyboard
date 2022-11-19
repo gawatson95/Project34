@@ -27,10 +27,10 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcF-Ij-BRC"/>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ArW-7y-ttS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiP-tk-2gU">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiP-tk-2gU">
                                         <rect key="frame" x="169" y="0.0" width="166.5" height="746"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -39,10 +39,10 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tO5-bj-y8m"/>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKC-Hc-7ja"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgk-LX-63j">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgk-LX-63j">
                                         <rect key="frame" x="337.5" y="0.0" width="167" height="746"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -51,10 +51,10 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLA-Bh-yOG"/>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9tp-TV-aKy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-Sd-Aj3">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-Sd-Aj3">
                                         <rect key="frame" x="506.5" y="0.0" width="167" height="746"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -63,10 +63,10 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="baP-2E-Ip3"/>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wu7-ab-cw7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0N-QM-1N7">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0N-QM-1N7">
                                         <rect key="frame" x="675.5" y="0.0" width="167" height="746"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -75,10 +75,10 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMk-8t-n9W"/>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7R7-nX-w9b"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-Q3-kwZ">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-Q3-kwZ">
                                         <rect key="frame" x="844.5" y="0.0" width="166.5" height="746"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -87,10 +87,10 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="shO-Ij-MJa"/>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uw7-fz-PKk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozd-c1-JZ1">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozd-c1-JZ1">
                                         <rect key="frame" x="1013" y="0.0" width="167" height="746"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
@@ -99,7 +99,7 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htE-tD-Up9"/>
+                                            <action selector="makeMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFU-Ae-wAX"/>
                                         </connections>
                                     </button>
                                 </subviews>
