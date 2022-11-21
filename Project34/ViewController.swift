@@ -78,5 +78,9 @@ class ViewController: UIViewController {
         yOffset -= size * CGFloat(row)
         return CGPoint(x: xOffset, y: yOffset)
     }
+    
+    func updateUI() {
+        title = "\(board.currentPlayer.name)'s Turn"
+    }
 }
 
