@@ -5,6 +5,7 @@
 //  Created by Grant Watson on 11/18/22.
 //
 
+import GameplayKit
 import UIKit
 
 class ViewController: UIViewController {
@@ -14,8 +15,16 @@ class ViewController: UIViewController {
     var placedChips = [[UIView]]()
     var board: Board!
     
+    var strategist: GKMinmaxStrategist!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        strategist = GKMinmaxStrategist()
+        strategist.maxLookAheadDepth = 7
+        strategist.randomSource = nil
+        // make a random best move in case of tie
+        // strategist.randomSource = CKARC4RandomSource()
         
         for _ in 0 ..< Board.width {
             placedChips.append([UIView]())
@@ -26,6 +35,9 @@ class ViewController: UIViewController {
     
     func resetBoard() {
         board = Board()
+        strategist.gameModel = board
+        
+        updateUI()
         
         for i in 0 ..< placedChips.count {
             for chip in placedChips[i] {
@@ -35,14 +47,15 @@ class ViewController: UIViewController {
             placedChips[i].removeAll(keepingCapacity: true)
         }
     }
-
+    
     
     @IBAction func makeMove(_ sender: UIButton) {
         let column = sender.tag
         
         if let row = board.nextEmptySlot(in: column) {
-            board.add(chip: .red, in: column)
-            addChip(inColumn: column, row: row, color: .red)
+            board.add(chip: board.currentPlayer.chip, in: column)
+            addChip(inColumn: column, row: row, color: board.currentPlayer.color)
+            continueGame()
         }
     }
     
@@ -81,6 +94,78 @@ class ViewController: UIViewController {
     
     func updateUI() {
         title = "\(board.currentPlayer.name)'s Turn"
+        
+        if board.currentPlayer.chip == .black {
+            startAIMove()
+        }
+    }
+    
+    func continueGame() {
+        var gameOverTitle: String? = nil
+        
+        if board.isWin(for: board.currentPlayer) {
+            gameOverTitle = "\(board.currentPlayer.name) Wins!"
+        } else if board.isFull() {
+            gameOverTitle = "Draw!"
+        }
+        
+        if gameOverTitle != nil {
+            let alert = UIAlertController(title: gameOverTitle, message: nil, preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Play Again", style: .default) { [unowned self] (action) in
+                self.resetBoard()
+            }
+            
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+            
+            return
+        }
+        
+        board.currentPlayer = board.currentPlayer.opponent
+        updateUI()
+    }
+    
+    func columnForAIMove() -> Int? {
+        if let aiMove = strategist.bestMove(for: board.currentPlayer) as? Move {
+            return aiMove.column
+        }
+        
+        return nil
+    }
+    
+    func makeAIMove(in column: Int) {
+        columnButtons.forEach { $0.isEnabled = true }
+        navigationItem.leftBarButtonItem = nil
+        
+        if let row = board.nextEmptySlot(in: column) {
+            board.add(chip: board.currentPlayer.chip, in: column)
+            addChip(inColumn: column, row: row, color: board.currentPlayer.color)
+            
+            continueGame()
+        }
+    }
+    
+    func startAIMove() {
+        columnButtons.forEach { $0.isEnabled = false }
+        
+        let spinner = UIActivityIndicatorView(style: .large)
+        spinner.color = .white
+        spinner.startAnimating()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: spinner)
+        
+        DispatchQueue.global().async { [unowned self] in
+            let strategistTime = CFAbsoluteTimeGetCurrent()
+            guard let column = self.columnForAIMove() else { return }
+            let delta = CFAbsoluteTimeGetCurrent() - strategistTime
+            
+            let aiTimeCeiling = 1.0
+            let delay = aiTimeCeiling - delta
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                self.makeAIMove(in: column)
+            }
+        }
     }
 }
 
